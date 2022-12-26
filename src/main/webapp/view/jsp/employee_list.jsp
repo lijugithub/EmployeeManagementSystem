@@ -54,13 +54,8 @@
             <td>${employee.department.departmentName}</td>
             <td>${employee.salary}</td>
             <td>
-            <a href="edit/${employee.id}">
-                       <input type="button"  value="Edit" class="btn btn-primary">
-                        					</a>
-            					<a href="delete/${employee.id}">
-            					<input type="button"  value="Delete" class="btn btn-primary"></a>
-           </a>
-
+            <a href="edit/${employee.id}"><input type="button"  value="Edit" class="btn btn-primary"></a>
+            <a href="delete/${employee.id}"><input type="button"  value="Delete" class="btn btn-primary"></a></a>
 
             </td>
     </tr>
