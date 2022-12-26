@@ -4,9 +4,8 @@
      function resetForm() {
          document.getElementById("employee-form").reset();
      }
-</script>
-<script>
-         $(function() {
+
+     $(function() {
              $.datepicker.setDefaults({
                  onClose:function(date, inst){
                      $("#selectedDtaeVal").html(date);
@@ -74,13 +73,12 @@
                 </div>
 
                 <div class="form-group row">
-                                        <label for="salary" class="col-sm-2 col-form-label">Salary</label>
-                                        <div class="col-sm-7">
-                                        <form:input type="number" path="salary" class="form-control" placeholder="Enter Salary"/>
-                                        <form:errors path="salary" class="text-danger" />
-
-                                        </div>
-                                </div>
+                     <label for="salary" class="col-sm-2 col-form-label">Salary</label>
+                     <div class="col-sm-7">
+                     <form:input type="number" path="salary" class="form-control" placeholder="Enter Salary"/>
+                     <form:errors path="salary" class="text-danger" />
+                     </div>
+                </div>
 
 <div class="form-group row">
 
