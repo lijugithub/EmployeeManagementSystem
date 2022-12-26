@@ -47,7 +47,6 @@
                 <div class="form-group row">
                       <%
                        Date date = new Date();
-                       System.out.println(date.toString());
                        SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
                        String strDate= formatter.format(date);
                       %>
