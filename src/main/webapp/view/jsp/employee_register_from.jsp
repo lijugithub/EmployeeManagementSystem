@@ -53,7 +53,12 @@
                       %>
                         <label for="dateOfJoining" class="col-sm-2 col-form-label">Date Of Joining</label>
                         <div class="col-sm-7">
-                        <form:input path="dateOfJoining" class="form-control" id="datepicker" placeholder="Select Date" readonly="true" title="dd/mm/yyyy format" value="<%=strDate%>"/>
+                        <% if(employeeDept==null) {%>
+                        <form:input path="dateOfJoining" class="form-control" id="datepicker" placeholder="Select Date" readonly="true"  value="<%=strDate%>"/>
+                        <%} else { %>
+                        <form:input path="dateOfJoining" class="form-control" id="datepicker" placeholder="Select Date" />
+                        <% }%>
+
                         <form:errors path="dateOfJoining" class="text-danger" />
                         </div>
                 </div>
