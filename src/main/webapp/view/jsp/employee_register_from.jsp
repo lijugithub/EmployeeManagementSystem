@@ -45,9 +45,15 @@
                 </div>
 
                 <div class="form-group row">
+                      <%
+                       Date date = new Date();
+                       System.out.println(date.toString());
+                       SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
+                       String strDate= formatter.format(date);
+                      %>
                         <label for="dateOfJoining" class="col-sm-2 col-form-label">Date Of Joining</label>
                         <div class="col-sm-7">
-                        <form:input path="dateOfJoining" class="form-control" id="datepicker" placeholder="Select Date"/>
+                        <form:input path="dateOfJoining" class="form-control" id="datepicker" placeholder="Select Date" readonly="true" title="dd/mm/yyyy format" value="<%=strDate%>"/>
                         <form:errors path="dateOfJoining" class="text-danger" />
                         </div>
                 </div>
@@ -56,7 +62,6 @@
                         <label for="departmentId" class="col-sm-2 col-form-label">Department</label>
                         <div class="col-sm-7">
                         <form:select path = "departmentId">
-                        <option value="">--Select--</option>
                           <c:forEach items="${departmentList}" var="department">
                               <option value="${department.departmentId}"  ${department.departmentId == empDept ? 'selected="selected"' : ''} >${department.departmentCode} - ${department.departmentName}</option>
                            </c:forEach>
